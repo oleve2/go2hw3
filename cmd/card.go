@@ -56,4 +56,14 @@ func main() {
 	resSum := card.SumByMCC(card1.Transactions, codes)
 	fmt.Println("mcc tran sum=", resSum)
 
+	// ========================================================
+	fmt.Println("==================================")
+	// проверка - получение расшифровки кода mcc
+	mccCode1 := card.TranslateMCC("5411")
+	mccCode2 := card.TranslateMCC("Пополнение")
+	arrMcc := []string{mccCode1, mccCode2}
+	for _, v := range arrMcc {
+		fmt.Println(v)
+	}
+
 }
